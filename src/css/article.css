@@ -147,8 +147,9 @@ code {
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    border-top: 1px solid #ccc;
-    border-bottom: 1px solid #ccc;
+    /* border-top: 1px solid #ccc; */
+    /* border-bottom: 1px solid #ccc; */
+    margin-bottom: 10px;
 }
 
 .content .author .authorProfile {
