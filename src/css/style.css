@@ -394,6 +394,7 @@ body {
 
 .mobileSearch .searchSuggestions .searchSuggestion a span {
     font-family: sans-serif;
+    color: grey;
 }
 
 
