@@ -2,7 +2,7 @@
     width: 100%;
     height: 100vh;
     display: flex;
-    align-items: center;
+    align-items: start;
     justify-content: center;
 }
 
@@ -12,6 +12,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-top: 75px;
 }
 
 .container .regForm .inputImage {
