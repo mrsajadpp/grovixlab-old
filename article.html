@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Article Page</title>
+    <link rel="shortcut icon" href="./src/img/icon.png" type="image/png">
+
+    <link rel="stylesheet" href="./src/css/style.css">
+
+    <style>
+        .top-bar {
+            opacity: 1;
+        }
+
+        .top-up {
+            opacity: 0;
+        }
+
+
+        .navigation-link-item.w-inline-block.w--current .navigation-link .navigation-link-text {
+            opacity: 1;
+            color: #000000;
+        }
+
+        .navigation-link-item.w-inline-block.w--current:hover .navigation-link .navigation-link-text {
+            opacity: 1;
+            color: #FFFFFF;
+        }
+
+        .navigation-link-item.w-inline-block:hover .navigation-link .navigation-link-text {
+            opacity: 1;
+            color: #000000;
+        }
+
+        .navigation-link-item.w-inline-block.w--current .navigation-link-arrow {
+            opacity: 1;
+        }
+
+        .navigation-link-item.w-inline-block:hover .navigation-link-arrow {
+            opacity: 1;
+        }
+
+        .navigation-link-item.w-inline-block .navigation-link-arrow {
+            opacity: 0;
+        }
+
+        body {
+            height: fit-content;
+            font-family: Lato, sans-serif;
+        }
+
+        h1,
+        h2 {
+            font-family: Lato, sans-serif !important;
+        }
+
+        .cont-cont {
+            display: flex;
+            align-items: start;
+            justify-content: center;
+            width: 100%;
+            height: auto;
+        }
+
+        .terms {
+            margin-top: 10%;
+            width: 85%;
+        }
+
+        .content img {
+            width: 100%;
+        }
+
+        h5 {
+            font-size: 40px;
+        }
+
+        h3 {
+            font-size: 25px;
+        }
+
+        p,
+        li {
+            font-family: Lato, sans-serif;
+            font-size: 15px;
+        }
+
+        p {
+            margin: 0 0 1.5em;
+            font-family: Lato, sans-serif;
+        }
+
+        code {
+            background-color: #f8f9fa;
+            padding: 2px 4px;
+            border-radius: 4px;
+            font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+        }
+
+        .example {
+            background-color: #f8f9fa;
+            padding: 10px;
+            border-radius: 4px;
+            margin-bottom: 20px;
+        }
+
+        pre {
+            white-space: pre-wrap;
+        }
+
+        .cont-cont {
+            display: flex;
+            justify-content: start;
+            margin-left: 154px;
+        }
+
+        @media only screen and (max-width: 1200px) {
+            .cont-cont {
+                display: flex;
+                justify-content: center !important;
+                margin-left: 0px !important;
+            }
+        }
+
+        .terms {
+            max-width: 800px;
+        }
+
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+
+        code {
+            font-family: 'Courier New', Courier, monospace;
+            color: #333;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- Desktop Header -->
+    <div class="header">
+        <div class="hLeft">
+            <a href="/">
+                <img src="./src/img/logo.png" alt="Grovix Lab">
+            </a>
+        </div>
+        <div class="hCenter">
+            <div class="searchBar">
+                <input type="text" placeholder="Search" name="query" id="query">
+                <button>
+                    <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24"
+                        viewBox="0 0 24 24" width="24" focusable="false"
+                        style="pointer-events: none; display: inherit; width: 28px; height: 28px;">
+                        <path
+                            d="m20.87 20.17-5.59-5.59C16.35 13.35 17 11.75 17 10c0-3.87-3.13-7-7-7s-7 3.13-7 7 3.13 7 7 7c1.75 0 3.35-.65 4.58-1.71l5.59 5.59.7-.71zM10 16c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6z">
+                        </path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div class="hRight">
+            <nav>
+                <ul>
+                    <li>
+                        <a href="/">
+                            <button>
+                                <!-- <svg xmlns="http://www.w3.org/2000/svg" class="active" enable-background="new 0 0 24 24" height="24"
+                                    viewBox="0 0 24 24" width="24" focusable="false"
+                                    style="pointer-events: none; display: inherit; width: 28px; height: 28px;">
+                                    <path
+                                        d="m12 4.44 7 6.09V20h-4v-6H9v6H5v-9.47l7-6.09m0-1.32-8 6.96V21h6v-6h4v6h6V10.08l-8-6.96z">
+                                    </path>
+                                </svg> -->
+                                <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24"
+                                    viewBox="0 0 24 24" class="active" width="24" focusable="false"
+                                    style="pointer-events: none; display: inherit; width: 28px; height: 28px;">
+                                    <g>
+                                        <path d="M4 21V10.08l8-6.96 8 6.96V21h-6v-6h-4v6H4z"></path>
+                                    </g>
+                                </svg>
+                            </button>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/trending">
+                            <button>
+                                <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24"
+                                    viewBox="0 0 24 24" width="24" focusable="false"
+                                    style="pointer-events: none; display: inherit; width: 28px; height: 28px;">
+                                    <path
+                                        d="M19 3.87v9.77C19 17.7 15.86 21 12 21s-7-3.3-7-7.37v-.13c0-1.06.22-2.13.62-3.09.5-1.19 1.29-2.21 2.27-2.97.85-.66 1.83-1.14 2.87-1.65.39-.19.77-.38 1.15-.58.36-.19.72-.38 1.08-.56v3.22l1.55-1.04L19 3.87M20 2l-6 4V3c-.85.44-1.7.88-2.55 1.33-1.41.74-2.9 1.34-4.17 2.32-1.13.87-2.02 2.05-2.58 3.37-.46 1.09-.7 2.29-.7 3.48v.14C4 18.26 7.58 22 12 22s8-3.74 8-8.36V2zM9.45 12.89 14 10v5.7c0 1.82-1.34 3.3-3 3.3s-3-1.47-3-3.3c0-1.19.58-2.23 1.45-2.81z">
+                                    </path>
+                                </svg>
+                            </button>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/categories">
+                            <button>
+                                <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24"
+                                    viewBox="0 0 24 24" width="24" focusable="false"
+                                    style="pointer-events: none; display: inherit; width: 28px; height: 28px;">
+                                    <path
+                                        d="M11 11v6H7v-6h4m1-1H6v8h6v-8zM3 3.03V21h14l4-4V3.03M20 4v11.99l-.01.01H16v3.99l-.01.01H4V4h16zm-2 4H6V6h12v2zm0 7h-5v-2h5v2zm0-3h-5v-2h5v2z">
+                                    </path>
+                                </svg>
+                            </button>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/notifications">
+                            <button>
+                                <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24"
+                                    viewBox="0 0 24 24" width="24" focusable="false"
+                                    style="pointer-events: none; display: inherit; width: 28px; height: 28px;">
+                                    <path
+                                        d="M10 20h4c0 1.1-.9 2-2 2s-2-.9-2-2zm10-2.65V19H4v-1.65l2-1.88v-5.15C6 7.4 7.56 5.1 10 4.34v-.38c0-1.42 1.49-2.5 2.99-1.76.65.32 1.01 1.03 1.01 1.76v.39c2.44.75 4 3.06 4 5.98v5.15l2 1.87zm-1 .42-2-1.88v-5.47c0-2.47-1.19-4.36-3.13-5.1-1.26-.53-2.64-.5-3.84.03C8.15 6.11 7 7.99 7 10.42v5.47l-2 1.88V18h14v-.23z">
+                                    </path>
+                                </svg>
+                            </button>
+                        </a>
+                    </li>
+                    <li style="width: 55px;">
+                        <a href="/profile">
+                            <button class="profile-menu">
+                                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjyToeAH0Yw-KYJYVNPNZpfFo01EkgFB7RciZ4KZFNV-9fDhbXqWvGw2AnfyjaaFOMveb9nX69tzrD6EFkZPuu7ee2WylQBbeFeGxaJP6d7HoeVuIIbA9H-vndcJyCRHcC_zAnDojygpdBOjb1xTAnf5wx28366D3lGKP35jPxh2F2vfxQ/s220/IMG_20240502_231437_652.jpg"
+                                    alt="">
+                            </button>
+                        </a>
+                    </li>
+                    &nbsp;&nbsp;
+                </ul>
+            </nav>
+
+        </div>
+    </div>
+
+    <!-- Mobile Header -->
+    <div class="headerMobile">
+        <div class="hLeft">
+            <button onclick="menu();">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24" focusable="false"
+                    style="pointer-events: none; display: inherit; width: 28px; height: 28px;">
+                    <path d="M21 6H3V5h18v1zm0 5H3v1h18v-1zm0 6H3v1h18v-1z"></path>
+                </svg>
+            </button>
+            <div class="logo">
+                <a href="/">
+                    <img src="./src/img/logo.png" alt="Grovix Lab">
+                </a>
+            </div>
+        </div>
+        <div class="hRight">
+            <nav>
+                <ul>
+                    <li>
+                        <a>
+                            <button onclick="search();" id="searchIcon">
+                                <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24"
+                                    viewBox="0 0 24 24" width="24" focusable="false"
+                                    style="pointer-events: none; display: inherit; width: 28px; height: 28px;">
+                                    <path
+                                        d="m20.87 20.17-5.59-5.59C16.35 13.35 17 11.75 17 10c0-3.87-3.13-7-7-7s-7 3.13-7 7 3.13 7 7 7c1.75 0 3.35-.65 4.58-1.71l5.59 5.59.7-.71zM10 16c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6z">
+                                    </path>
+                                </svg>
+
+                                <!-- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;">
+                                    <path
+                                        d="m16.192 6.344-4.243 4.242-4.242-4.242-1.414 1.414L10.535 12l-4.242 4.242 1.414 1.414 4.242-4.242 4.243 4.242 1.414-1.414L13.364 12l4.242-4.242z">
+                                    </path>
+                                </svg> -->
+                            </button>
+                        </a>
+                    </li>
+                    <li style="width: 55px;">
+                        <a href="/profile">
+                            <button class="profile-menu">
+                                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjyToeAH0Yw-KYJYVNPNZpfFo01EkgFB7RciZ4KZFNV-9fDhbXqWvGw2AnfyjaaFOMveb9nX69tzrD6EFkZPuu7ee2WylQBbeFeGxaJP6d7HoeVuIIbA9H-vndcJyCRHcC_zAnDojygpdBOjb1xTAnf5wx28366D3lGKP35jPxh2F2vfxQ/s220/IMG_20240502_231437_652.jpg"
+                                    alt="">
+                            </button>
+                        </a>
+                    </li>
+                    &nbsp;&nbsp;
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="mobileMenu hide" id="mobileMenu">
+        <div class="menuTop">
+            <button onclick="menu();">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24" focusable="false"
+                    style="pointer-events: none; display: inherit; width: 28px; height: 28px;">
+                    <path d="M21 6H3V5h18v1zm0 5H3v1h18v-1zm0 6H3v1h18v-1z"></path>
+                </svg>
+            </button>
+        </div>
+        <div class="menuItems">
+            <div class="menuItem">
+                <a href="/">
+                    <button>
+                        <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24"
+                            viewBox="0 0 24 24" class="active" width="24" focusable="false"
+                            style="pointer-events: none; display: inherit; width: 28px; height: 28px;">
+                            <g>
+                                <path d="M4 21V10.08l8-6.96 8 6.96V21h-6v-6h-4v6H4z"></path>
+                            </g>
+                        </svg>
+                    </button>
+                    <span class="active">Home</span>
+                </a>
+            </div>
+            <div class="menuItem">
+                <a href="/trending">
+                    <button>
+                        <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24"
+                            viewBox="0 0 24 24" width="24" focusable="false"
+                            style="pointer-events: none; display: inherit; width: 28px; height: 28px;">
+                            <path
+                                d="M19 3.87v9.77C19 17.7 15.86 21 12 21s-7-3.3-7-7.37v-.13c0-1.06.22-2.13.62-3.09.5-1.19 1.29-2.21 2.27-2.97.85-.66 1.83-1.14 2.87-1.65.39-.19.77-.38 1.15-.58.36-.19.72-.38 1.08-.56v3.22l1.55-1.04L19 3.87M20 2l-6 4V3c-.85.44-1.7.88-2.55 1.33-1.41.74-2.9 1.34-4.17 2.32-1.13.87-2.02 2.05-2.58 3.37-.46 1.09-.7 2.29-.7 3.48v.14C4 18.26 7.58 22 12 22s8-3.74 8-8.36V2zM9.45 12.89 14 10v5.7c0 1.82-1.34 3.3-3 3.3s-3-1.47-3-3.3c0-1.19.58-2.23 1.45-2.81z">
+                            </path>
+                        </svg>
+                    </button>
+                    <span>Trending</span>
+                </a>
+            </div>
+            <div class="menuItem">
+                <a href="/categories">
+                    <button>
+                        <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24"
+                            viewBox="0 0 24 24" width="24" focusable="false"
+                            style="pointer-events: none; display: inherit; width: 28px; height: 28px;">
+                            <path
+                                d="M11 11v6H7v-6h4m1-1H6v8h6v-8zM3 3.03V21h14l4-4V3.03M20 4v11.99l-.01.01H16v3.99l-.01.01H4V4h16zm-2 4H6V6h12v2zm0 7h-5v-2h5v2zm0-3h-5v-2h5v2z">
+                            </path>
+                        </svg>
+                    </button>
+                    <span>Categories</span>
+                </a>
+            </div>
+            <div class="menuItem">
+                <a href="/notifications">
+                    <button>
+                        <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24"
+                            viewBox="0 0 24 24" width="24" focusable="false"
+                            style="pointer-events: none; display: inherit; width: 28px; height: 28px;">
+                            <path
+                                d="M10 20h4c0 1.1-.9 2-2 2s-2-.9-2-2zm10-2.65V19H4v-1.65l2-1.88v-5.15C6 7.4 7.56 5.1 10 4.34v-.38c0-1.42 1.49-2.5 2.99-1.76.65.32 1.01 1.03 1.01 1.76v.39c2.44.75 4 3.06 4 5.98v5.15l2 1.87zm-1 .42-2-1.88v-5.47c0-2.47-1.19-4.36-3.13-5.1-1.26-.53-2.64-.5-3.84.03C8.15 6.11 7 7.99 7 10.42v5.47l-2 1.88V18h14v-.23z">
+                            </path>
+                        </svg>
+                    </button>
+                    <span>Notifications</span>
+                </a>
+            </div>
+        </div>
+        <div class="menuItems">
+            <div class="menuItem">
+                <a href="/feedback">
+                    <button>
+                        <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24"
+                            viewBox="0 0 24 24" width="24" focusable="false"
+                            style="pointer-events: none; display: inherit; width: 28px; height: 28px;">
+                            <path
+                                d="M13 14h-2v-2h2v2zm0-9h-2v6h2V5zm6-2H5v16.59l3.29-3.29.3-.3H19V3m1-1v15H9l-5 5V2h16z">
+                            </path>
+                        </svg>
+                    </button>
+                    <span>Feedback</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile Search -->
+
+    <div class="mobileSearch hide" id="searchBar">
+        <div class="searchBar">
+            <input type="text" placeholder="Search" name="query" id="search">
+            <button>
+                <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24"
+                    viewBox="0 0 24 24" width="24" focusable="false"
+                    style="pointer-events: none; display: inherit; width: 28px; height: 28px; fill: #fff;">
+                    <path
+                        d="m20.87 20.17-5.59-5.59C16.35 13.35 17 11.75 17 10c0-3.87-3.13-7-7-7s-7 3.13-7 7 3.13 7 7 7c1.75 0 3.35-.65 4.58-1.71l5.59 5.59.7-.71zM10 16c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6z">
+                    </path>
+                </svg>
+            </button>
+        </div>
+        <div class="searchSuggestions">
+            <div class="searchSuggestion">
+                <a href="">
+                    <button>
+                        <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24"
+                            viewBox="0 0 24 24" width="24" focusable="false"
+                            style="pointer-events: none; display: inherit; width: 100%; height: 100%; fill: #ccc;">
+                            <path
+                                d="m20.87 20.17-5.59-5.59C16.35 13.35 17 11.75 17 10c0-3.87-3.13-7-7-7s-7 3.13-7 7 3.13 7 7 7c1.75 0 3.35-.65 4.58-1.71l5.59 5.59.7-.71zM10 16c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6z">
+                            </path>
+                        </svg>
+                    </button>
+                    <span>What is a NPM package?</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Spacing -->
+    <style>
+        @media only screen and (max-width: 899px) {
+            .mobile-view {
+                height: 20px;
+            }
+        }
+
+        @media only screen and (max-width: 600px) {
+            .mobile-view {
+                height: 75px;
+            }
+        }
+    </style>
+
+    <div class="mobile-view"></div>
+
+    <!-- Content -->
+    <div class="container">
+        <div class="content">
+            <div class="cont-cont">
+                <div class="terms">
+                    <h1>How to create an NPM package?</h1><br>
+                    <img src="https://www.thintry.com/src/img/article/how-to-create-an-npm-package/how-to-create-an-npm-package.webp"
+                        alt="How to create an NPM package?">
+                    <h2>What is a NPM package?</h2>
+                    <p>NPM, short for Node Package Manager, is like a giant online toolbox for Node.js developers. It's
+                        a
+                        massive collection of pre-written code pieces that programmers can use to build
+                        software faster. With millions of these "building blocks" available, it's like having a giant
+                        toolbox for any programming project. The best part? Programmers who like to help others share
+                        their
+                        tools on npm, making it a giant online sharing space. Even businesses use npm to keep track of
+                        their
+                        own code pieces, making it a one-stop shop for both sharing and organizing software tools.</p>
+                    <h2>The procedures for Naming Your NPM Package</h2>
+                    <p>Selecting a name is the first step towards building your package. This is significant because a
+                        unique package name is required. It is best to select a name that hasn't been taken already.
+
+                        Once you have a name in mind, search the <a href="https://www.npmjs.com/">NPM registry</a>. Make
+                        sure the name you selected does not
+                        already exist (or that the names are too similar).</p>
+                    <h2>How to Create a NPM Package?</h2>
+                    <p>Follow the steps below to create your package. </p>
+
+                    <h3>1. Install Node.js</h3>
+                    <p>Installing Node.js should be your first step if it isn't already. To get Node.js and install it,
+                        go to the official <a href="https://nodejs.org/en">website</a>. Node.js is pre-installed with
+                        NPM.</p>
+                    <h3>3. Initialize NPM in Your Project</h3>
+                    <p>To actually do this, go to your project's root directory and execute the following command:</p>
+                    <script src="https://gist.github.com/mrsajadpp/9b7449dd783cfedf15f25efaff6b6c18.js"></script>
+
+                    <h4>Explanation:</h4>
+                    <p><strong>npm init</strong> is a command used to initialize a new Node.js project and create a
+                        `package.json` file, which is used to manage project dependencies and metadata.</p>
+                    <p>When you run <strong>npm init</strong>, it will prompt you to enter various details about your
+                        project, such as:</p>
+                    <ul>
+                        <li><strong>package name:</strong> The name of your project. This is usually lowercase and may
+                            include hyphens.</li>
+                        <li><strong>version:</strong> The initial version of your project.</li>
+                        <li><strong>description:</strong> A brief description of your project.</li>
+                        <li><strong>entry point:</strong> The main JavaScript file that will be executed when your
+                            project is run.</li>
+                        <li><strong>test command:</strong> The command to run your project's tests, if any.</li>
+                        <li><strong>git repository:</strong> The URL of your project's Git repository.</li>
+                        <li><strong>keywords:</strong> An array of keywords that describe your project.</li>
+                        <li><strong>author:</strong> The author of the project.</li>
+                        <li><strong>license:</strong> The license under which your project is distributed.</li>
+                    </ul>
+                    <p>After you've entered these details, npm will generate a `package.json` file based on your inputs.
+                    </p>
+
+                    <h3>4. Code your NPM Package</h3>
+                    <p>Now that you've initialized your project, you can start coding your package. This involves
+                        creating the necessary JavaScript files, defining your package's functionality, and implementing
+                        any dependencies or external libraries.</p>
+                    <script src="https://gist.github.com/mrsajadpp/da741c3725e6e1f47ff5e7d4f4456726.js"></script>
+                    <p>After creating your function, you should export it like in the example above. That way, anyone
+                        who downloads your package can load and use it in their code.</p>
+
+                    <h2>How to Publish Your NPM Package</h2>
+                    <p>Once you've coded and tested your package, it's time to share it with the world by publishing it
+                        on
+                        the NPM registry.</p>
+                    <p>First, make sure you're logged in to your NPM account using the <code>npm login</code> command.
+                    </p>
+                    <script src="https://gist.github.com/mrsajadpp/f3e38d70b9256bffe10a9e602b4516a0.js"></script>
+                    <p>Then, navigate to your project's directory in the terminal and run the <code>npm publish</code>
+                        command.</p>
+                    <script src="https://gist.github.com/mrsajadpp/cfd602065ffd841d3dae004ad83c96e7.js"></script>
+                    <p>This will upload your package to the NPM registry, making it available for others to install and
+                        use.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu Script -->
+        <script>
+            let mobileMenu = document.getElementById('mobileMenu');
+            let searchIcon = document.getElementById('searchIcon');
+            let searhBar = document.getElementById('searchBar');
+
+            const menu = () => {
+                mobileMenu.classList.toggle('hide');
+                searhBar.classList.add('hide');
+                searchIcon.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24"
+                                    viewBox="0 0 24 24" width="24" focusable="false"
+                                    style="pointer-events: none; display: inherit; width: 28px; height: 28px;">
+                                    <path
+                                        d="m20.87 20.17-5.59-5.59C16.35 13.35 17 11.75 17 10c0-3.87-3.13-7-7-7s-7 3.13-7 7 3.13 7 7 7c1.75 0 3.35-.65 4.58-1.71l5.59 5.59.7-.71zM10 16c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6z">
+                                    </path>
+                                </svg>`
+            }
+        </script>
+
+        <!-- Search Bar Script -->
+        <script>
+
+            const search = () => {
+                searhBar.classList.toggle('hide');
+                mobileMenu.classList.add('hide');
+                if (searhBar.classList.contains('hide')) {
+                    searchIcon.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24"
+                                    viewBox="0 0 24 24" width="24" focusable="false"
+                                    style="pointer-events: none; display: inherit; width: 28px; height: 28px;">
+                                    <path
+                                        d="m20.87 20.17-5.59-5.59C16.35 13.35 17 11.75 17 10c0-3.87-3.13-7-7-7s-7 3.13-7 7 3.13 7 7 7c1.75 0 3.35-.65 4.58-1.71l5.59 5.59.7-.71zM10 16c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6z">
+                                    </path>
+                                </svg>`
+                } else {
+                    searchIcon.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;">
+                                    <path
+                                        d="m16.192 6.344-4.243 4.242-4.242-4.242-1.414 1.414L10.535 12l-4.242 4.242 1.414 1.414 4.242-4.242 4.243 4.242 1.414-1.414L13.364 12l4.242-4.242z">
+                                    </path>
+                                </svg>`
+                }
+            }
+        </script>
+</body>
+
+</html>
