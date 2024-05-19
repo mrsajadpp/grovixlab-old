@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>SignUp</title>
     <link rel="shortcut icon" href="./src/img/icon.png" type="image/png">
     <link rel="stylesheet" href="./src/css/style.css">
     <link rel="stylesheet" href="./src/css/regform.css">
@@ -17,7 +17,16 @@
                 <img src="./src/img/logo.png" alt="">
             </div>
             <div class="inputBox">
+                <input type="text" name="firts_name" id="firts_name" placeholder="First Name">
+            </div>
+            <div class="inputBox">
+                <input type="text" name="last_name" id="last_name" placeholder="Last Name">
+            </div>
+            <div class="inputBox">
                 <input type="email" name="email" id="email" placeholder="Email">
+            </div>
+            <div class="inputBox">
+                <input type="tel" name="phone" id="phone" placeholder="Phone">
             </div>
             <div class="inputBox">
                 <input type="password" placeholder="Password" name="password" id="password">
@@ -25,7 +34,8 @@
             <div class="inputText">
                 <input type="checkbox" name="terms_accept" id="terms">
                 <span>
-                    Remember me.
+                    By using our services, you are accepting our <a href="terms-and-conditions.html"
+                        target="_blank">terms and conditions</a>.
                 </span>
             </div>
             <div class="inputBox">

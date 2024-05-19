@@ -12,10 +12,16 @@ body {
 
 button {
     outline: none;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: normal;
 }
 
 input {
     outline: none;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: normal;
 }
 
 /* Desktop Header */
