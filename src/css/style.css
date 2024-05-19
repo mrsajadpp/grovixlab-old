@@ -143,6 +143,91 @@ body {
 
 /* Mobile Header Under 786px */
 
+.header-mobile {
+    display: none;
+    width: 100%;
+    height: 75px;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+    border-bottom: 1px solid #ccc;
+}
+
+.header-mobile .h-left {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.header-mobile .h-right {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-mobile .h-left button {
+    width: 75px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background-color: transparent;
+}
+
+.header-mobile .h-left .logo img {
+    width: 120px;
+}
+
+.header-mobile .h-right nav {
+    width: 100%;
+    margin: 0px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.header-mobile .h-right nav ul {
+    width: 100%;
+    margin: 0px;
+    height: 100%;
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content: end;
+}
+
+.header-mobile .h-right nav ul li {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+}
+
+.header-mobile .h-right nav ul li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* width: 100%; */
+    /* height: 30px; */
+}
+
+.header-mobile .h-right nav ul li a button {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background-color: transparent;
+}
+
 /* Responsive Control */
 
 @media (max-width: 786px) {
