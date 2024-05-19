@@ -313,7 +313,7 @@ body {
 }
 
 .mobileMenu .menuItems .menuItem span {
-    font-family: sans-serif;
+    font-family: "Poppins", sans-serif;
 }
 
 /* Mobile Search */
@@ -402,7 +402,7 @@ body {
 }
 
 .mobileSearch .searchSuggestions .searchSuggestion a span {
-    font-family: sans-serif;
+    font-family: "Poppins", sans-serif;
     color: grey;
 }
 
