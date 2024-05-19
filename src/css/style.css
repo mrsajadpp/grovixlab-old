@@ -21,7 +21,7 @@ body {
     top: 0px;
 }
 
-.header .h-left {
+.header .hLeft {
     height: 100%;
     width: 200px;
     display: flex;
@@ -30,7 +30,7 @@ body {
     padding-left: 10px;
 }
 
-.header .h-center {
+.header .hCenter {
     height: 100%;
     flex-grow: 1;
     display: flex;
@@ -38,7 +38,7 @@ body {
     justify-content: center;
 }
 
-.header .h-right {
+.header .hRight {
     height: 100%;
     width: fit-content;
     display: flex;
@@ -46,17 +46,17 @@ body {
     justify-content: center;
 }
 
-.header .h-left img {
+.header .hLeft img {
     width: 120px;
 }
 
-.header .h-right nav {
+.header .hRight nav {
     width: 100%;
     height: 100%;
     padding: 0px;
 }
 
-.header .h-right nav ul {
+.header .hRight nav ul {
     list-style: none;
     display: flex;
     align-items: center;
@@ -67,7 +67,7 @@ body {
     padding: 0px;
 }
 
-.header .h-right nav ul li {
+.header .hRight nav ul li {
     display: flex;
     width: 100%;
     height: 100%;
@@ -77,7 +77,7 @@ body {
     cursor: pointer;
 }
 
-.header .h-right nav ul li a {
+.header .hRight nav ul li a {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -85,7 +85,7 @@ body {
     /* height: 30px; */
 }
 
-.header .h-right nav ul li a button {
+.header .hRight nav ul li a button {
     display: flex;
     width: 100%;
     height: 100%;
@@ -107,7 +107,7 @@ body {
     width: 35px;
 }
 
-.header .h-center .search-bar {
+.header .hCenter .searchBar {
     width: 70%;
     height: 50%;
     display: flex;
@@ -119,7 +119,7 @@ body {
 
 }
 
-.header .h-center .search-bar input {
+.header .hCenter .searchBar input {
     width: calc(100% - 70px);
     height: 100%;
     border: none;
@@ -127,7 +127,7 @@ body {
     padding-left: 10px;
 }
 
-.header .h-center .search-bar button {
+.header .hCenter .searchBar button {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -143,7 +143,7 @@ body {
 
 /* Mobile Header Under 786px */
 
-.header-mobile {
+.headerMobile {
     display: none;
     width: 100%;
     height: 75px;
@@ -155,7 +155,7 @@ body {
     top: 0px;
 }
 
-.header-mobile .h-left {
+.headerMobile .hLeft {
     width: 50%;
     height: 100%;
     display: flex;
@@ -163,7 +163,7 @@ body {
     justify-content: start;
 }
 
-.header-mobile .h-right {
+.headerMobile .hRight {
     width: 50%;
     height: 100%;
     display: flex;
@@ -171,7 +171,7 @@ body {
     justify-content: center;
 }
 
-.header-mobile .h-left button {
+.headerMobile .hLeft button {
     width: 75px;
     height: 100%;
     display: flex;
@@ -181,11 +181,11 @@ body {
     background-color: transparent;
 }
 
-.header-mobile .h-left .logo img {
+.headerMobile .hLeft .logo img {
     width: 120px;
 }
 
-.header-mobile .h-right nav {
+.headerMobile .hRight nav {
     width: 100%;
     margin: 0px;
     height: 100%;
@@ -194,7 +194,7 @@ body {
     justify-content: end;
 }
 
-.header-mobile .h-right nav ul {
+.headerMobile .hRight nav ul {
     width: 100%;
     margin: 0px;
     height: 100%;
@@ -204,7 +204,7 @@ body {
     justify-content: end;
 }
 
-.header-mobile .h-right nav ul li {
+.headerMobile .hRight nav ul li {
     display: flex;
     height: 100%;
     align-items: center;
@@ -212,7 +212,7 @@ body {
     margin-left: 10px;
 }
 
-.header-mobile .h-right nav ul li a {
+.headerMobile .hRight nav ul li a {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -220,7 +220,7 @@ body {
     /* height: 30px; */
 }
 
-.header-mobile .h-right nav ul li a button {
+.headerMobile .hRight nav ul li a button {
     display: flex;
     width: 100%;
     height: 100%;
@@ -321,7 +321,7 @@ body {
         display: none;
     }
 
-    .header-mobile {
+    .headerMobile {
         display: flex;
     }
 }
