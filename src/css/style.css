@@ -118,7 +118,7 @@ body {
     border-radius: 20px;
 
 }
- 
+
 .header .h-center .search-bar input {
     width: calc(100% - 70px);
     height: 100%;
@@ -139,4 +139,18 @@ body {
 
 .active {
     fill: #0078e8;
+}
+
+/* Mobile Header Under 786px */
+
+/* Responsive Control */
+
+@media (max-width: 786px) {
+    .header {
+        display: none;
+    }
+
+    .header-mobile {
+        display: flex;
+    }
 }
