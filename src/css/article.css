@@ -177,6 +177,7 @@ code {
 .content .author .authorDetials h4 {
     padding: 0px;
     margin: 0px;
+    display: flex;
 }
 
 .content .author .authorDetials p {
