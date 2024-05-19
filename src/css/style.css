@@ -308,6 +308,95 @@ body {
     font-family: sans-serif;
 }
 
+/* Mobile Search */
+
+.mobileSearch {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    position: fixed;
+    top: 75px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    background-color: #fff;
+}
+
+.mobileSearch .searchBar {
+    display: flex;
+    width: 80%;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ccc;
+    overflow: hidden;
+}
+
+.mobileSearch .searchBar input {
+    width: calc(100% - 70px);
+    height: 100%;
+    outline: none;
+    padding-left: 10px;
+    border: none;
+}
+
+.mobileSearch .searchBar button {
+    width: 70px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    border: none;
+    background-color: #0078e8;
+}
+
+.mobileSearch .searchSuggestions {
+    width: 80%;
+    height: auto;
+    max-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    /* margin-top: 10px; */
+}
+
+.mobileSearch .searchSuggestions .searchSuggestion {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    margin-top: 10px;
+}
+
+.mobileSearch .searchSuggestions .searchSuggestion a {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    overflow: hidden;
+    text-decoration: none;
+    color: #000;
+}
+
+.mobileSearch .searchSuggestions .searchSuggestion a button {
+    margin-left: 10px;
+    border: none;
+    background-color: transparent;
+}
+
+.mobileSearch .searchSuggestions .searchSuggestion a span {
+    font-family: sans-serif;
+}
+
+
 /* Responsive Control */
 
 @media (min-width: 786px) {
