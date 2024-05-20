@@ -113,12 +113,7 @@
 
 .seperatorContainer .seperator div:hover {
     border-bottom: 1px solid #a0cbf3;
-    color: #a0cbf3 !important;
     fill: #a0cbf3 !important;
-}
-
-.seperatorContainer .seperator div:hover .sepText {
-    color: #a0cbf3;
 }
 
 /* Article Section */
