@@ -398,6 +398,7 @@ input {
     border: 1px solid #ccc;
     margin-top: 10px;
     border-radius: 85px;
+    background-color: #f6f6f6;
 }
 
 .mobileSearch .searchSuggestions .searchSuggestion a {
