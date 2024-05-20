@@ -158,6 +158,7 @@ input {
 
 .active {
     fill: #0078e8;
+    color: #0078e8;
 }
 
 /* Mobile Header Under 786px */
