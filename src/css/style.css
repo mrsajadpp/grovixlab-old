@@ -361,6 +361,7 @@ input {
     outline: none;
     padding-left: 10px;
     border: none;
+    font-size: 17px;
 }
 
 .mobileSearch .searchBar button {
