@@ -353,6 +353,7 @@ input {
     justify-content: center;
     border: 1px solid #ccc;
     overflow: hidden;
+    border-radius: 85px;
 }
 
 .mobileSearch .searchBar input {
@@ -372,8 +373,8 @@ input {
     justify-content: center;
     outline: none;
     border: none;
-    background-color: #ccc;
 }
+
 
 .mobileSearch .searchSuggestions {
     width: 80%;
