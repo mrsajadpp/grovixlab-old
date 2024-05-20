@@ -372,7 +372,7 @@ input {
     justify-content: center;
     outline: none;
     border: none;
-    background-color: #0078e8;
+    background-color: #ccc;
 }
 
 .mobileSearch .searchSuggestions {
