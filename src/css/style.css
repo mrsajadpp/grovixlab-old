@@ -127,8 +127,8 @@ input {
 }
 
 .header .hCenter .searchBar {
-    width: 70%;
-    height: 50%;
+    width: 60%;
+    height: 55%;
     display: flex;
     align-items: center;
     justify-content: center;
