@@ -397,6 +397,7 @@ input {
     overflow: hidden;
     border: 1px solid #ccc;
     margin-top: 10px;
+    border-radius: 85px;
 }
 
 .mobileSearch .searchSuggestions .searchSuggestion a {
