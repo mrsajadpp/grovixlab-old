@@ -39,3 +39,7 @@
     border-radius: 5px !important;
     overflow: hidden;
 }
+
+.seLeft {
+    width: 70% !important;
+}
