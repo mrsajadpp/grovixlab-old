@@ -65,6 +65,13 @@ input {
     justify-content: center;
 }
 
+.header .hLeft a {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .header .hLeft img {
     width: 160px;
 }
@@ -204,6 +211,13 @@ input {
 }
 
 .headerMobile .hLeft .logo {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.headerMobile .hLeft .logo a {
     height: 100%;
     display: flex;
     align-items: center;
