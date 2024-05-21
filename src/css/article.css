@@ -242,3 +242,29 @@ strong {
 #nativeShareButton {
     width: 40%;
 }
+
+/* Date */
+
+.artDate {
+    width: 100%;
+    /* margin-top: 10px; */
+    height: 30px;
+    background-color: #0078e8;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.artDate .date {
+    width: 160px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding-left: 10px;
+}
+
+.artDate .date span {
+    font-size: 11px;
+    color: #fff;
+}
