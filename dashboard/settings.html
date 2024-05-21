@@ -332,9 +332,10 @@
                 </span>
             </div>
             <br>
-            <div onclick="document.getElementById('profile').click();" id="inputProfile" class="inputProfile"
+            <input type="file" name="profile" hidden accept="image/jpg, image/jpeg, image/png" id="profileInp">
+            <div onclick="document.getElementById('profileInp').click();" id="inputProfile" class="inputProfile"
                 style="background-image: url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjyToeAH0Yw-KYJYVNPNZpfFo01EkgFB7RciZ4KZFNV-9fDhbXqWvGw2AnfyjaaFOMveb9nX69tzrD6EFkZPuu7ee2WylQBbeFeGxaJP6d7HoeVuIIbA9H-vndcJyCRHcC_zAnDojygpdBOjb1xTAnf5wx28366D3lGKP35jPxh2F2vfxQ/s220/IMG_20240502_231437_652.jpg');">
-                <button>
+                <button type="button">
                     <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false"
                         class="style-scope tp-yt-iron-icon"
                         style="pointer-events: none; display: block; width: 34px; height: 34px; fill: #fff;">
@@ -345,8 +346,6 @@
                         </g>
                     </svg>
                 </button>
-                <input type="file" name="profile" hidden accept="image/jpg, image/jpeg, image/png" id="profile"
-                    onchange="previewImage(event)">
             </div>
             <div class="inputBox">
                 <input type="text" name="firts_name" id="firts_name" placeholder="First Name">
@@ -475,22 +474,27 @@
 
     <!-- Image preview script -->
     <script>
-        let profile = document.getElementById('profile');
+        document.addEventListener("DOMContentLoaded", function () {
+            const inputProfileDiv = document.getElementById('inputProfile');
+            const fileInput = document.getElementById('profileInp');
 
-        function previewImage(event) {
-            const input = event.target;
-            const file = input.files[0];
-            console.log(file);
-            if (file) {
-                const reader = new FileReader();
-                reader.onload = function (e) {
-                    const inputProfileDiv = document.getElementById('inputProfile');
-                    inputProfileDiv.style.backgroundImage = `url(${e.target.result})`;
+            fileInput.addEventListener('change', function (event) {
+                event.preventDefault(); // Prevent default form submission behavior
+                const input = event.target;
+                const file = input.files[0];
+                if (file) {
+                    const reader = new FileReader();
+                    reader.onload = function (e) {
+                        inputProfileDiv.style.backgroundImage = `url(${e.target.result})`;
+                    }
+                    reader.readAsDataURL(file);
                 }
-                reader.readAsDataURL(file);
-            }
-        }
+            });
 
+            inputProfileDiv.addEventListener('click', function () {
+                fileInput.click();
+            });
+        });
     </script>
 
     <!-- Mobile Menu Script -->
