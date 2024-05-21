@@ -4,11 +4,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard >> Grovix Lab</title>
+    <title>New >> Articles >> Dashboard >> Grovix Lab</title>
     <link rel="shortcut icon" href="../src/img/icon.png" type="image/png">
 
     <link rel="stylesheet" href="../src/css/style.css">
     <link rel="stylesheet" href="../src/css/dashboard.css">
+    <link rel="stylesheet" href="../src/css/regform.css">
+
+    <script src="https://cdn.tiny.cloud/1/llcxlum3gmbfg1bensi9kvrv8tja8gvivpyyhqtsl1y09i50/tinymce/7/tinymce.min.js"
+        referrerpolicy="origin"></script>
+    <script>
+        tinymce.init({
+            selector: '#content',
+            plugins: 'anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount checklist mediaembed casechange export formatpainter pageembed linkchecker a11ychecker tinymcespellchecker permanentpen powerpaste advtable advcode editimage advtemplate ai mentions tinycomments tableofcontents footnotes mergetags autocorrect typography inlinecss markdown',
+            toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table mergetags | addcomment showcomments | spellcheckdialog a11ycheck typography | align lineheight | checklist numlist bullist indent outdent | emoticons charmap | removeformat',
+            tinycomments_mode: 'embedded',
+            tinycomments_author: 'Author name',
+            mergetags_list: [
+                { value: 'First.Name', title: 'First Name' },
+                { value: 'Email', title: 'Email' },
+            ],
+            ai_request: (request, respondWith) => respondWith.string(() => Promise.reject("See docs to implement AI Assistant")),
+        });
+    </script>
 </head>
 
 <body>
@@ -26,11 +44,12 @@
                         <a href="/dashboard/">
                             <button>
                                 <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false"
-                                    class="active"
+                                    class="style-scope tp-yt-iron-icon"
                                     style="pointer-events: none; display: block; width: 28px; height: 28px;">
-                                    <g width="24" height="24" viewBox="0 0 24 24" class="active">
-                                        <path d="M11 3H3V13H11V3ZM21 11H13V21H21V11ZM11 15H3V21H11V15ZM13 3V9H21V3H13Z"
-                                            class="active"></path>
+                                    <g width="24" height="24" viewBox="0 0 24 24" class="style-scope tp-yt-iron-icon">
+                                        <path
+                                            d="M10 16V20H4V16H10ZM11 15H3V21H11V15ZM20 4V8H14V4H20ZM21 3H13V9H21V3ZM3 3V13H11V3H3ZM10 12H4V4H10V12ZM13 11V21H21V11H13ZM20 20H14V12H20V20Z"
+                                            class="style-scope tp-yt-iron-icon"></path>
                                     </g>
                                 </svg>
                             </button>
@@ -40,10 +59,10 @@
                         <a href="/dashboard/articles">
                             <button>
                                 <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24"
-                                    viewBox="0 0 24 24" width="24" focusable="false"
+                                    viewBox="0 0 24 24" width="24" class="active" focusable="false"
                                     style="pointer-events: none; display: inherit; width: 28px; height: 28px;">
                                     <path
-                                        d="M11 11v6H7v-6h4m1-1H6v8h6v-8zM3 3.03V21h14l4-4V3.03M20 4v11.99l-.01.01H16v3.99l-.01.01H4V4h16zm-2 4H6V6h12v2zm0 7h-5v-2h5v2zm0-3h-5v-2h5v2z">
+                                        d="M3 3.03V21h14l4-4V3.03H3zM6 6h12v2H6V6zm7 9v-2h5v2h-5zm0-3v-2h5v2h-5zm-1 6H6v-8h6v8zm4-2h3.99L16 19.99V16z">
                                     </path>
                                 </svg>
                             </button>
@@ -177,29 +196,31 @@
             <div class="menuItem">
                 <a href="/dashboard/">
                     <button>
-                        <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="active"
+                        <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false"
+                            class="style-scope tp-yt-iron-icon"
                             style="pointer-events: none; display: block; width: 28px; height: 28px;">
-                            <g width="24" height="24" viewBox="0 0 24 24" class="active">
-                                <path d="M11 3H3V13H11V3ZM21 11H13V21H21V11ZM11 15H3V21H11V15ZM13 3V9H21V3H13Z"
-                                    class="active"></path>
+                            <g width="24" height="24" viewBox="0 0 24 24" class="style-scope tp-yt-iron-icon">
+                                <path
+                                    d="M10 16V20H4V16H10ZM11 15H3V21H11V15ZM20 4V8H14V4H20ZM21 3H13V9H21V3ZM3 3V13H11V3H3ZM10 12H4V4H10V12ZM13 11V21H21V11H13ZM20 20H14V12H20V20Z"
+                                    class="style-scope tp-yt-iron-icon"></path>
                             </g>
                         </svg>
                     </button>
-                    <span class="active">Dashboard</span>
+                    <span>Dashboard</span>
                 </a>
             </div>
             <div class="menuItem">
                 <a href="/dashboard/articles">
                     <button>
                         <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24"
-                            viewBox="0 0 24 24" width="24" focusable="false"
+                            viewBox="0 0 24 24" width="24" class="active" focusable="false"
                             style="pointer-events: none; display: inherit; width: 28px; height: 28px;">
                             <path
-                                d="M11 11v6H7v-6h4m1-1H6v8h6v-8zM3 3.03V21h14l4-4V3.03M20 4v11.99l-.01.01H16v3.99l-.01.01H4V4h16zm-2 4H6V6h12v2zm0 7h-5v-2h5v2zm0-3h-5v-2h5v2z">
+                                d="M3 3.03V21h14l4-4V3.03H3zM6 6h12v2H6V6zm7 9v-2h5v2h-5zm0-3v-2h5v2h-5zm-1 6H6v-8h6v8zm4-2h3.99L16 19.99V16z">
                             </path>
                         </svg>
                     </button>
-                    <span>Articles</span>
+                    <span class="active">Articles</span>
                 </a>
             </div>
             <div class="menuItem">
@@ -279,21 +300,77 @@
         </div>
     </div>
 
-    <!-- Dashboard Graph Metrix Coming Soon -->
-    <div class="comingSoon">
-        <div class="comgText">
-            <span>Dashboard Graph Metrics Under Construction. Please wait, they will be coming soon! Our team is working on it <span class="higlight">:)</span></span>
+    <!-- Seperators Starts -->
+    <!-- <div class="seperatorContainer">
+        <div class="seperator">
+            <div class="seLeft selected">
+                <a href="/dashboard/articles">
+                    <button>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="active" height="24" viewBox="0 0 24 24"
+                            width="24" focusable="false"
+                            style="pointer-events: none; display: inherit; width: 24px; height: 24px;">
+                            <path
+                                d="M14.97 16.95 10 13.87V7h2v5.76l4.03 2.49-1.06 1.7zM12 2C8.73 2 5.8 3.44 4 5.83V3.02H2V9h6V7H5.62C7.08 5.09 9.36 4 12 4c4.41 0 8 3.59 8 8s-3.59 8-8 8-8-3.59-8-8H2c0 5.51 4.49 10 10 10s10-4.49 10-10S17.51 2 12 2z">
+                            </path>
+                        </svg>
+                    </button>
+                    <span class="sepText active">Approved</span>
+                </a>
+            </div>
+            <div class="seRight">
+                <a href="/dashboard/articles/pending">
+                    <button>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"
+                            focusable="false"
+                            style="pointer-events: none; display: inherit; width: 24px; height: 24px;">
+                            <path
+                                d="M14.97 16.95 10 13.87V7h2v5.76l4.03 2.49-1.06 1.7zM12 3c-4.96 0-9 4.04-9 9s4.04 9 9 9 9-4.04 9-9-4.04-9-9-9m0-1c5.52 0 10 4.48 10 10s-4.48 10-10 10S2 17.52 2 12 6.48 2 12 2z">
+                            </path>
+                        </svg>
+                    </button>
+                    <span class="sepText">Pending</span>
+                </a>
+            </div>
         </div>
-    </div>
+    </div> -->
 
-    <!-- New Article Button -->
-    <div class="newArticle">
-        <div class="articleButton">
-            <a href="/dashboard/new">
-                <button>
+    <!-- Writing Area -->
+    <div class="container">
+        <form action="" class="regForm" enctype="multipart/form-data">
+            <div class="inputBox">
+                <input type="text" name="title" id="title" placeholder="Article Title*">
+            </div>
+            <div class="inputBox">
+                <select name="category" id="category">
+                    <option value="" disabled selected>Select a category</option>
+                    <option value="arts">Arts</option>
+                    <option value="business">Business</option>
+                    <option value="education">Education</option>
+                    <option value="entertainment">Entertainment</option>
+                    <option value="health">Health</option>
+                    <option value="lifestyle">Lifestyle</option>
+                    <option value="news">News</option>
+                    <option value="politics">Politics</option>
+                    <option value="programming">Programming</option>
+                    <option value="science">Science</option>
+                    <option value="sports">Sports</option>
+                    <option value="technology">Technology</option>
+                    <option value="travel">Travel</option>
+                    <option value="others">Others</option>
+                </select>
+            </div>
+
+            <div class="inputBox customCategory hide">
+                <input type="text" name="custom_category" id="customCategory" placeholder="Custom Category*">
+            </div>
+
+            <input type="file" name="thumbnail" hidden accept="image/jpg, image/jpeg, image/png" id="profileInp">
+            <div id="inputProfile" class="inputProfile"
+                style="background-image: url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjyToeAH0Yw-KYJYVNPNZpfFo01EkgFB7RciZ4KZFNV-9fDhbXqWvGw2AnfyjaaFOMveb9nX69tzrD6EFkZPuu7ee2WylQBbeFeGxaJP6d7HoeVuIIbA9H-vndcJyCRHcC_zAnDojygpdBOjb1xTAnf5wx28366D3lGKP35jPxh2F2vfxQ/s220/IMG_20240502_231437_652.jpg');">
+                <button type="button">
                     <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false"
                         class="style-scope tp-yt-iron-icon"
-                        style="pointer-events: none; display: block; width: 28px; height: 28px;">
+                        style="pointer-events: none; display: block; width: 34px; height: 34px; fill: #fff;">
                         <g width="24" height="24" viewBox="0 0 24 24" class="style-scope tp-yt-iron-icon">
                             <path
                                 d="M14.06 7.6L16.4 9.94L6.34 20H4V17.66L14.06 7.6ZM14.06 6.19L3 17.25V21H6.75L17.81 9.94L14.06 6.19ZM17.61 4.05L19.98 6.42L18.84 7.56L16.47 5.19L17.61 4.05ZM17.61 2.63L15.06 5.18L18.85 8.97001L21.4 6.42L17.61 2.63Z"
@@ -301,9 +378,54 @@
                         </g>
                     </svg>
                 </button>
-            </a>
-        </div>
+            </div>
+
+            <div class="inputText">
+                <span class="textMsg">The image should have dimensions of <span style="color: #0078e8;">1920x1080</span>
+                    pixels.</span>
+            </div>
+
+            <div class="textBox">
+                <textarea name="content" id="content"></textarea>
+            </div>
+
+            <!-- <div class="inputBox">
+                <input type="text" name="last_name" id="last_name" placeholder="Last Name">
+            </div>
+            <div class="inputBox">
+                <input type="email" name="email" id="email" placeholder="Email">
+            </div>
+            <div class="inputBox">
+                <input type="tel" name="phone" id="phone" placeholder="Phone">
+            </div>
+            <div class="inputBox">
+                <input type="password" placeholder="Password" name="password" id="password">
+            </div> -->
+            <!-- <div class="inputText">
+                <input type="checkbox" name="terms_accept" id="terms">
+                <span>
+                    By using our services, you are accepting our <a href="terms-and-conditions.html"
+                        target="_blank">terms and conditions</a>.
+                </span>
+            </div> -->
+            <div class="inputText">
+                <span class="textMsg" style="color: red;">
+                    If the request button is still disabled, please ensure all fields are correctly filled. If it
+                    remains disabled, try editing your title to trigger the validation.
+                </span>
+            </div>
+            <div class="inputBox">
+                <button disabled class="regButton disabled">
+                    Request
+                </button>
+            </div>
+            <!-- <div class="inputText">
+                <span>Do you have a account? <a href="./login.html">LogIn</a>.</span>
+            </div> -->
+        </form>
     </div>
+
+    <br><br>
 
     <!-- Footer -->
     <footer class="footer">
@@ -396,6 +518,84 @@
             </div> -->
         </div>
     </footer>
+
+    <!-- Image preview script -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const inputProfileDiv = document.getElementById('inputProfile');
+            const fileInput = document.getElementById('profileInp');
+            const saveButton = document.querySelector('.regButton');
+            const errorMsg = document.querySelector('.textMsg');
+            const title = document.getElementById('title');
+            const category = document.getElementById('category');
+            const content = document.getElementById('content');
+            const customCategory = document.getElementById('customCategory');
+            const customCatBox = document.querySelector('.customCategory');
+
+            function validateForm() {
+                if (title.value !== '' && fileInput.value !== '' && category.value !== '' && tinymce.get('content').getContent() !== '') {
+                    if (category.value === 'others' && customCategory.value === '') {
+                        saveButton.setAttribute('disabled', 'true');
+                        saveButton.classList.add('disabled');
+                    } else {
+                        saveButton.removeAttribute('disabled');
+                        saveButton.classList.remove('disabled');
+                    }
+                } else {
+                    saveButton.setAttribute('disabled', 'true');
+                    saveButton.classList.add('disabled');
+                }
+            }
+
+            title.addEventListener('change', validateForm);
+            category.addEventListener('change', function (event) {
+                if (event.target.value === 'others') {
+                    customCatBox.classList.remove('hide');
+                } else {
+                    customCatBox.classList.add('hide');
+                }
+                validateForm();
+            });
+
+            content.addEventListener('change', validateForm);
+
+            fileInput.addEventListener('change', function (event) {
+                const file = event.target.files[0];
+                if (!file) return;
+
+                const img = new Image();
+                const reader = new FileReader();
+
+                reader.onload = function (e) {
+                    img.src = e.target.result;
+                    img.onload = function () {
+                        const width = img.naturalWidth;
+                        const height = img.naturalHeight;
+
+                        if (width !== 1920 || height !== 1080) {
+                            saveButton.setAttribute('disabled', 'true');
+                            saveButton.classList.add('disabled');
+                            errorMsg.style.color = 'red';
+                            errorMsg.textContent = 'Image dimensions must be 1920x1080';
+                        } else {
+                            errorMsg.style.color = 'green';
+                            errorMsg.textContent = 'Image dimensions are correct';
+                            validateForm();
+                        }
+
+                        inputProfileDiv.style.backgroundImage = `url(${e.target.result})`;
+                    };
+                };
+
+                reader.readAsDataURL(file);
+            });
+
+            inputProfileDiv.addEventListener('click', function () {
+                fileInput.click();
+            });
+        });
+    </script>
+
 
     <!-- Mobile Menu Script -->
     <script>

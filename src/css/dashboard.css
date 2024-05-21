@@ -232,6 +232,10 @@
     margin-top: 5px;
 }
 
+.container {
+    height: auto !important;
+}
+
 @media (max-width: 375px) {
     .articleContainer .articles .article .articleCont .articleContent p  {
         display: none;
