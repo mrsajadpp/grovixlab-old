@@ -139,11 +139,6 @@ textarea {
     justify-content: end !important;
 }
 
-.regForm .inputBox button {
-    width: 100px !important;
-    border-radius: 5px;
-}
-
 .regForm .inputBox {
     border-radius: 5px !important;
     overflow: hidden;
