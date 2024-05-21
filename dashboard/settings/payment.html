@@ -412,6 +412,11 @@
             return emailRegex.test(email);
         }
 
+        function validateUPI(upi) {
+            const UPIRegex = "^[0-9A-Za-z.-]{2,256}@[A-Za-z]{2,64}$";
+            return UPIRegex.test(upi);
+        }
+
         payMethodSelect.addEventListener('change', async function () {
             bankDetails.style.display = 'none';
             paypalDetails.style.display = 'none';
@@ -502,7 +507,6 @@
 
                 // Check if PayPal email field is empty
                 if (validEmail == false) {
-                    console.log('done');
                     retValue = false;
                 } else {
                     retValue = true;
@@ -510,10 +514,10 @@
                 return retValue;
             } else if (selectedMethod === 'upi') {
                 const upiId = document.querySelector('.upi').value.trim();
-                console.log(upiId);
+                let validUPI = await validateUPI(upiId);
 
                 // Check if UPI ID field is empty
-                if (upiId === '') {
+                if (validUPI == false) {
                     retValue = false;
                 } else {
                     retValue = true;
