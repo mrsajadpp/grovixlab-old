@@ -363,10 +363,10 @@
                     <input type="text" name="swiftCode" class="swiftCode" placeholder="Swift Code">
                 </div>
                 <div class="inputBox">
-                    <input type="text" name="ifscCode" class="ifscCode" placeholder="IFSC Code">
+                    <input type="text" name="ifscCode" onchange="document.querySelector('.ifscCode').value = (document.querySelector('.ifscCode').value.toUpperCase()).replace(/\s+/g, '')" class="ifscCode" placeholder="IFSC Code">
                 </div>
                 <div class="inputBox">
-                    <input type="text" name="accountNumber" class="accountNumber" placeholder="Account Number">
+                    <input type="number" name="accountNumber" onchange="document.querySelector('.accountNumber').value = document.querySelector('.accountNumber').value.replace(/\s+/g, '')" class="accountNumber" placeholder="Account Number">
                 </div>
                 <div class="inputBox">
                     <input type="text" name="accountHolderName" class="accountHolderName"
@@ -413,7 +413,7 @@
         }
 
         function validateUPI(upi) {
-            const UPIRegex = "^[0-9A-Za-z.-]{2,256}@[A-Za-z]{2,64}$";
+            const UPIRegex = /^[a-zA-Z0-9.\-_]{2,256}@[a-zA-Z]{2,64}$/;
             return UPIRegex.test(upi);
         }
 
