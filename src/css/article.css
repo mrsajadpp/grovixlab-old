@@ -61,6 +61,7 @@ h2 {
 
 .content img {
     width: 100%;
+    border-radius: 13px;
 }
 
 h4 {
@@ -153,8 +154,8 @@ code {
 }
 
 .content .author .authorProfile {
-    width: 67px;
-    height: 67px;
+    width: 60px;
+    height: 60px;
     overflow: hidden;
     border-radius: 85px;
     border: 2px solid #0078e8;
@@ -171,8 +172,8 @@ code {
 }
 
 .content .author .authorProfile img {
-    width: 67px;
-    height: 67px;
+    width: 60px;
+    height: 60px;
 }
 
 .content .author .authorDetials h4 {
