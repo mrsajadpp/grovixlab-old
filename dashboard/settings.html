@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="../src/css/style.css">
     <link rel="stylesheet" href="../src/css/dashboard.css">
     <link rel="stylesheet" href="../src/css/settings.css">
+    <link rel="stylesheet" href="../src/css/regform.css">
 </head>
 
 <body>
@@ -318,7 +319,61 @@
     </div>
 
     <!-- Profile -->
-    
+    <div class="container" style="margin-top: 90px;">
+        <form action="" class="regForm">
+            <div class="inputText">
+                <span>
+                    By using our services, you are accepting our <a href="terms-and-conditions.html"
+                        target="_blank">terms and conditions</a>.
+                </span>
+            </div>
+            <br>
+            <div onclick="document.getElementById('profile').click();" class="inputProfile"
+                style="background-image: url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjyToeAH0Yw-KYJYVNPNZpfFo01EkgFB7RciZ4KZFNV-9fDhbXqWvGw2AnfyjaaFOMveb9nX69tzrD6EFkZPuu7ee2WylQBbeFeGxaJP6d7HoeVuIIbA9H-vndcJyCRHcC_zAnDojygpdBOjb1xTAnf5wx28366D3lGKP35jPxh2F2vfxQ/s220/IMG_20240502_231437_652.jpg');">
+                <button>
+                    <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false"
+                        class="style-scope tp-yt-iron-icon"
+                        style="pointer-events: none; display: block; width: 34px; height: 34px; fill: #fff;">
+                        <g width="24" height="24" viewBox="0 0 24 24" class="style-scope tp-yt-iron-icon">
+                            <path
+                                d="M14.06 7.6L16.4 9.94L6.34 20H4V17.66L14.06 7.6ZM14.06 6.19L3 17.25V21H6.75L17.81 9.94L14.06 6.19ZM17.61 4.05L19.98 6.42L18.84 7.56L16.47 5.19L17.61 4.05ZM17.61 2.63L15.06 5.18L18.85 8.97001L21.4 6.42L17.61 2.63Z"
+                                class="style-scope tp-yt-iron-icon"></path>
+                        </g>
+                    </svg>
+                </button>
+                <input type="file" name="profile" hidden accept="image/jpg" id="profile">
+            </div>
+            <div class="inputBox">
+                <input type="text" name="firts_name" id="firts_name" placeholder="First Name">
+                &nbsp;
+                <input type="text" name="last_name" id="last_name" placeholder="Last Name">
+            </div>
+            <div class="inputBox">
+                <input type="email" name="email" id="email" placeholder="Email">
+            </div>
+            <div class="inputBox">
+                <input type="tel" name="phone" id="phone" placeholder="Phone">
+            </div>
+            <div class="inputBox">
+                <input type="password" placeholder="Password" name="password" id="password">
+            </div>
+            <!-- <div class="inputText">
+                <input type="checkbox" name="terms_accept" id="terms">
+                <span>
+                    By using our services, you are accepting our <a href="terms-and-conditions.html"
+                        target="_blank">terms and conditions</a>.
+                </span>
+            </div> -->
+            <div class="inputBox">
+                <button>
+                    Save
+                </button>
+            </div>
+            <!-- <div class="inputText">
+                <span>Do you have a account? <a href="./login.html">LogIn</a>.</span>
+            </div> -->
+        </form>
+    </div>
 
     <!-- Footer -->
     <footer class="footer">
