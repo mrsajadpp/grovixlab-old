@@ -2,6 +2,7 @@
 
 html {
     scroll-behavior: smooth;
+    height: max-content;
 }
 
 body {
@@ -444,6 +445,9 @@ input {
 .mobileSearch .searchSuggestions .searchSuggestion a span {
     font-family: "Poppins", sans-serif;
     color: grey;
+}
+.landing{
+    height: 100vh;
 }
 
 strong {
